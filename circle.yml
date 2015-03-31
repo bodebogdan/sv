@@ -1,6 +1,6 @@
 deployment:
-  production:
-    branch: master
+  staging:
+    branch: master:staging
     commands:
-      - git push git@heroku.com:sv-rails.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run rake db:migrate --app sv-rails
+      - git push git@heroku.com:sv-home.git $CIRCLE_SHA1:refs/heads/master:staging
+      - heroku run rake db:migrate --app sv-home
