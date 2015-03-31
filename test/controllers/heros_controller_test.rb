@@ -18,7 +18,7 @@ class HerosControllerTest < ActionController::TestCase
 
   test "should create hero" do
     assert_difference('Hero.count') do
-      post :create, hero: { attribute: @hero.attribute, level: @hero.level, role: @hero.role }
+      post :create, hero: { attrib: @hero.attrib, level: @hero.level, role: @hero.role }
     end
 
     assert_redirected_to hero_path(assigns(:hero))
@@ -35,7 +35,7 @@ class HerosControllerTest < ActionController::TestCase
   end
 
   test "should update hero" do
-    patch :update, id: @hero, hero: { attribute: @hero.attribute, level: @hero.level, role: @hero.role }
+    patch :update, id: @hero, hero: { attrib: @hero.attrib, level: @hero.level, role: @hero.role }
     assert_redirected_to hero_path(assigns(:hero))
   end
 
