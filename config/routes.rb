@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 Sv::Application.routes.draw do
   resources :heros
 
+=======
+Rails.application.routes.draw do
+  resources :cars
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

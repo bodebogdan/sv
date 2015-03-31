@@ -2,12 +2,20 @@
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+<<<<<<< HEAD
 // or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+=======
+// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
 //
+<<<<<<< HEAD
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+=======
+// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
 // about supported directives.
 //
 //= require jquery

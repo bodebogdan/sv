@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Sv::Application.configure do
+=======
+Rails.application.configure do
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -12,9 +16,15 @@ Sv::Application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
+<<<<<<< HEAD
   # Configure static asset server for tests with Cache-Control for performance.
   config.serve_static_assets  = true
   config.static_cache_control = "public, max-age=3600"
+=======
+  # Configure static file server for tests with Cache-Control for performance.
+  config.serve_static_files   = true
+  config.static_cache_control = 'public, max-age=3600'
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -31,6 +41,17 @@ Sv::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+<<<<<<< HEAD
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+=======
+  # Randomize the order test cases are executed.
+  config.active_support.test_order = :random
+
+  # Print deprecation notices to the stderr.
+  config.active_support.deprecation = :stderr
+
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
 end

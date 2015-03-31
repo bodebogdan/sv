@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150331171449) do
 
   create_table "heros", force: true do |t|
@@ -19,6 +20,16 @@ ActiveRecord::Schema.define(version: 20150331171449) do
     t.string   "attribute"
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+ActiveRecord::Schema.define(version: 20150326165940) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string   "color"
+    t.integer  "hp"
+    t.string   "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> f8df8d3ea436027881e25fa728f8d93a0d3d35bf
   end
 
 end
