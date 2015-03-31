@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @hero.role %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @hero.level %>
+</p>
+
+<p>
+  <strong>Attribute:</strong>
+  <%= @hero.attribute %>
+</p>
+
+<%= link_to 'Edit', edit_hero_path(@hero) %> |
+<%= link_to 'Back', heros_path %>
