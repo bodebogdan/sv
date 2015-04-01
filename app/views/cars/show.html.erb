@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<p class="text-center" id="notice"><%= notice %></p>
+<table class="table">
+	<tr>
+	  <th class="text-center">Color</th>
+      <th class="text-center">Hp</th>
+      <th class="text-center">Model</th>
+	</tr>
+	<tr class="text-center">
+		<td>
+		  <%= @car.color %>
+		</td>
 
-<p>
-  <strong>Color:</strong>
-  <%= @car.color %>
-</p>
+		<td>
+		  <%= @car.hp %>
+		</td>
 
-<p>
-  <strong>Hp:</strong>
-  <%= @car.hp %>
-</p>
+		<td>
+		  <%= @car.model %>
+		</td>
+	</tr>
+</table>
 
-<p>
-  <strong>Model:</strong>
-  <%= @car.model %>
-</p>
-
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %>
+<ul class="list-inline pull-right" >
+  <li><%= link_to 'Edit', edit_car_path(@car) %> </li>
+  <li><%= link_to 'Back', cars_path %></li>
+</ul>
