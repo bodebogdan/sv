@@ -1,26 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Le cars</h1>
+<h1 class="text-center">Le cars</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Color</th>
-      <th>Hp</th>
-      <th>Model</th>
+<table class="table">
+  <thead >
+    <tr class="text-center">
+      <th class="text-center">Color</th>
+      <th class="text-center">Hp</th>
+      <th class="text-center">Model</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @cars.each do |car| %>
-      <tr>
+      <tr >
         <td><%= car.color %></td>
         <td><%= car.hp %></td>
         <td><%= car.model %></td>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Y U DESTROY?!?' } %></td>
+        </tr>
+        <tr>
+        <td><%= link_to 'Show', car ,:class=>"glyphicon glyphicon-road"%></td>
+        <td><%= link_to 'Edit', edit_car_path(car) ,:class=>"glyphicon glyphicon-edit"%></td>
+        <td><%= link_to '',  car, method: :delete, data: { confirm: 'Y U DESTROY?!?' } ,:class=>"glyphicon glyphicon-remove"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Car', new_car_path %>
+<h1 class="text-center" style="color:black"><%= link_to 'New Car', new_car_path , :class=>"btn btn-danger" %></h1>

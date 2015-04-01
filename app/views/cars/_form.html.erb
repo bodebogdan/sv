@@ -1,4 +1,6 @@
-<%= form_for(@car) do |f| %>
+
+<div class="text-center">
+  <%= form_for(@car) do |f| %>
   <% if @car.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
@@ -24,6 +26,7 @@
     <%= f.text_field :model %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Test"%>
   </div>
-<% end %>
+<% end %>      
+</div>

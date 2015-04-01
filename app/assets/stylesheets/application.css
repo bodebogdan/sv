@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+/*.field {
+	text-align: center;
+}
+#center{
+	margin-top:100px;
+	text-align:center;
+}*/
+
+body,html{
+	background:url(http://fotoeclipse.files.wordpress.com/2010/01/bottom_background1-highway.jpg) fixed black no-repeat center center;
+
+
+  width:100%;
+  height:100%;
+}
+ .vertical-wrapper {
+  display: table;
+  width:100%;
+  height:100%;
+}
+.vertical-center {
+  display:table-cell;
+  vertical-align: middle;;
+}
+.container{
+	background: rgba(255,255,255,0.33);
+}
