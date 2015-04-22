@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="text-center">Le cars</h1>
-
+<div class="text-center">Most expensive car is <%=  @most_expensive_car.model %> </div>
 <table class="table">
   <thead >
     <tr class="text-center">
       <th class="text-center">Color</th>
       <th class="text-center">Hp</th>
       <th class="text-center">Model</th>
+      <th class="text-center">Price</th>
+      <th class="text-center">Stock</th>
+      <th class="text-center">Total Value</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,14 +18,21 @@
   <tbody class="text-center">
     <% @cars.each do |car| %>
       <tr class="text-center">
+      
         <td><%= car.color %></td>
         <td><%= car.hp %></td>
         <td><%= car.model %></td>
+        <td><%= car.price %></td>
+        <td><%= car.stock %></td>
+        <td><%= car.total_value %></td>
         </tr>
         <tr>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Show', car ,:class=>"glyphicon glyphicon-road"%></td>
         <td><%= link_to 'Edit', edit_car_path(car) ,:class=>"glyphicon glyphicon-edit"%></td>
         <td><%= link_to '',  car, method: :delete, data: { confirm: 'Y U DESTROY?!?' } ,:class=>"glyphicon glyphicon-remove"%></td>
+        <td></td>
       </tr>
     <% end %>
   </tbody>
