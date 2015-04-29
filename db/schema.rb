@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422170929) do
+ActiveRecord::Schema.define(version: 20150429153558) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "color"
@@ -22,5 +22,27 @@ ActiveRecord::Schema.define(version: 20150422170929) do
     t.integer  "price"
     t.integer  "stock"
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "rating_id"
+    t.integer  "car_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["car_id"], name: "index_comments_on_car_id"
+  add_index "comments", ["rating_id"], name: "index_comments_on_rating_id"
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "car_id"
+    t.integer  "user_id"
+    t.integer  "score",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "ratings", ["car_id"], name: "index_ratings_on_car_id"
+  add_index "ratings", ["user_id"], name: "index_ratings_on_user_id"
 
 end

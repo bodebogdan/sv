@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="text-center">Le cars</h1>
-<div class="text-center">Most expensive car is <%=  @most_expensive_car.model %> </div>
+<div class="text-center">Most expensive car is <%=  @most_expensive_car.model unless @most_expensive_car.nil? %> </div>
 <table class="table">
   <thead >
     <tr class="text-center">
@@ -11,6 +11,9 @@
       <th class="text-center">Price</th>
       <th class="text-center">Stock</th>
       <th class="text-center">Total Value</th>
+      <th class="text-center">Averate rating</th>
+      <th class="text-center">Your rating</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,8 +28,11 @@
         <td><%= car.price %></td>
         <td><%= car.stock %></td>
         <td><%= car.total_value %></td>
+        <td class="text-center"><div class="star" data-car-score="<%=car.average_rating%>"></div></td>
+        <td class="text-center" ><dicv class="user_star" data-car-id="<%=car.id%>"></div></td>
         </tr>
         <tr>
+        <td></td>
         <td></td>
         <td></td>
         <td><%= link_to 'Show', car ,:class=>"glyphicon glyphicon-road"%></td>
