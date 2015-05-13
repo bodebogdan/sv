@@ -4,6 +4,7 @@
 	  <th class="text-center">Color</th>
       <th class="text-center">Hp</th>
       <th class="text-center">Model</th>
+      <th class="text-center">Photo</th>
       <th class="text-center">Price</th>
       <th class="text-center">Stock</th>
 	</tr>
@@ -18,6 +19,9 @@
 
 		<td>
 		  <%= @car.model %>
+		</td>
+		<td>
+		  <%= image_tag (@car.photo_url(:thumb)) if @car.photo? %>
 		</td>
 		<td>
 		  <%= @car.price %>
